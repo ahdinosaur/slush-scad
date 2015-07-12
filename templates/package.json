@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "brfs": "^1.4.0",
+    "browserify": "^10.2.6",
     "browserify-incremental": "^3.0.1",
     "ecstatic-lr": "^1.0.0",
     "gh-pages": "^0.3.1",
