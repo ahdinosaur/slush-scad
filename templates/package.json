@@ -1,0 +1,58 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "index.js",
+  "scripts": {
+    "start": "(rerun-script & ecstatic-lr | wtch bundle.js)",
+    "build-js": "browserifyinc index.js -o bundle.js",
+    "build-scad": "openscad scad/index.scad -o index.stl",
+    "build": "npm run build-scad && npm run build-js",
+    "push": "gh-pages -d .",
+    "deploy": "npm run build && npm run push"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "watches": {
+    "build-js": [
+      "index.js",
+      "js/*.js",
+      "index.stl"
+    ],
+    "build-scad": [
+      "scad/*.scad"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= author %>/<%= name %>.git"
+  },
+  "keywords": [
+    "openscad",
+    "scad",
+    "3d",
+    "stl"
+  ],
+  "author": "<%= author %>",
+  "license": "<%= license %>",
+  "bugs": {
+    "url": "https://github.com/<%= author %>/<%= name %>/issues"
+  },
+  "homepage": "https://github.com/<%= author %>/<%= name %>#readme",
+  "dependencies": {
+    "gl-mesh3d": "^1.0.5",
+    "gl-plot3d": "^1.4.1",
+    "parse-stl": "^1.0.2"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.0",
+    "browserify-incremental": "^3.0.1",
+    "ecstatic-lr": "^1.0.0",
+    "gh-pages": "^0.3.1",
+    "rerun-script": "^0.6.0",
+    "wtch": "^3.2.1"
+  }
+}

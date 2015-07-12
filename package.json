@@ -1,0 +1,48 @@
+{
+  "name": "slush-scad",
+  "description": "a slush generator for OpenSCAD 3d modeling projects",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ahdinosaur/slush-scad",
+  "author": {
+    "name": "Michael Williams",
+    "email": "michael.williams@enspiral.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahdinosaur/slush-scad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/slush-scad/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ahdinosaur/slush-scad/blob/master/LICENSE"
+    }
+  ],
+  "main": "slushfile.js",
+  "engines": {
+    "node": ">= 0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "scripts": {
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-conflict": "^0.1.1",
+    "gulp-install": "^0.1.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^0.1.1",
+    "iniparser": "^1.0.5",
+    "inquirer": "^0.8.0",
+    "osi-licenses": "^0.1.1",
+    "slush": ">=1.0.0",
+    "underscore.string": "^2.3.3",
+    "user-home": "^2.0.0",
+    "username": "^1.0.0"
+  },
+  "keywords": [
+    "slushgenerator"
+  ]
+}
