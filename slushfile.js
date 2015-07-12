@@ -17,7 +17,7 @@ var inquirer = require('inquirer')
 var path = require('path')
 var licenses = require('osi-licenses')
 var userHome = require('user-home')
-var userName = require('user-name')
+var userName = require('username')
 
 function format (string) {
     var username = string.toLowerCase();
@@ -26,12 +26,12 @@ function format (string) {
 
 var defaults = (function () {
     var workingDirName = path.basename(process.cwd())
-    var homeDir = userHome() || ''
+    var homeDir = userHome || ''
     var osUserName = userName.sync()
     var configFile = path.join(homeDir, '.gitconfig')
 
     configFile = path.join(homeDir, '.gitconfig');
-    user = {};
+    var user = {};
 
     if (require('fs').existsSync(configFile)) {
         user = require('iniparser').parseSync(configFile).user;
