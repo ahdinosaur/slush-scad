@@ -1,7 +1,7 @@
 {
   "name": "slush-scad",
   "description": "a slush generator for OpenSCAD 3d modeling projects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/ahdinosaur/slush-scad",
   "author": {
     "name": "Michael Williams",
