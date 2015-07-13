@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "start": "(rerun-script & ecstatic-lr | wtch bundle.js)",
+    "start": "npm run build | rerun-script & ecstatic-lr | wtch bundle.js",
     "build-js": "browserifyinc index.js -o bundle.js",
     "build-scad": "openscad scad/index.scad -o index.stl",
     "build": "npm run build-scad && npm run build-js",
